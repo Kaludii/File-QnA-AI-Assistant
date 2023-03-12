@@ -24,9 +24,11 @@ def chatbot(api_key, query_text, file_data):
     )
     reply = chat.choices[0].message.content
     messages.append({"role": "assistant", "content": reply})
+    if "InvalidRequestError" in reply:
+        raise Exception(reply)
     return reply
 
-api_key = st.text_input("OpenAI API Key", key=2)
+api_key = st.text_input("OpenAI API Key", type="password", key=2)
 query_text = st.text_input("Question", key="input")
 file_type = st.selectbox("Select File Type", options=["CSV", "PDF", "Text"])
 
@@ -64,7 +66,14 @@ else:
 output_text = st.empty()
 
 if st.button("Send"):
-    response = chatbot(api_key, query_text, file_data)
-    if response:
-        st.write("Response:")        
+    try:
+        response = chatbot(api_key, query_text, file_data)
+        st.write("Response:")
         st.write(response)
+    except Exception as e:
+        st.error(str(e))
+
+st.markdown("")
+st.markdown("---")
+st.markdown("")
+st.markdown("<p style='text-align: center'><a href='https://github.com/Kaludii'>Github</a> | <a href='https://huggingface.co/Kaludi'>HuggingFace</a></p>", unsafe_allow_html=True)
