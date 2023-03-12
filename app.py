@@ -29,7 +29,7 @@ def chatbot(api_key, query_text, file_data):
     return reply
 
 api_key = st.text_input("OpenAI API Key", type="password", key=2)
-query_text = st.text_input("Question", key="input")
+query_text = st.text_area("Question", key="input", height=150)
 file_type = st.selectbox("Select File Type", options=["CSV", "PDF", "Text"])
 
 # Initialize file_data variable with a default value of None
