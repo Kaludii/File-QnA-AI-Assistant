@@ -35,7 +35,7 @@ def chatbot(api_key, query_text, file_data):
     messages.append({"role": "assistant", "content": response_line})
 
 api_key = st.text_input("OpenAI API Key", type="password", key=2)
-query_text = st.text_area("Question", key="input", height=150)
+query_text = st.text_area("Question", key="input", height=100)
 file_type = st.selectbox("Select File Type", options=["CSV", "PDF", "Text"])
 
 file_data = None
