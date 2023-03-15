@@ -1,7 +1,7 @@
 
 # File Q&A AI Assistant
 
-This is a Streamlit app that allows users to upload CSV or PDF files, or enter text and ask questions related to the content. The app uses OpenAI's ChatGPT model to assist users in answering their questions about the uploaded content.
+This is a Streamlit app that allows users to upload CSV or PDF files, or enter text and ask questions related to the content. The app uses OpenAI's ChatGPT model to assist users in answering their questions about the uploaded content, which is streamed back in real time similar to the ChatGPT interface.
 
 # Web App
 Click [Here](https://huggingface.co/spaces/Kaludi/File-QnA-AI-Assistant_App "Here") To View This App Online!
