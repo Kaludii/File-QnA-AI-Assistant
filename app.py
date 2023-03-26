@@ -54,8 +54,22 @@ elif file_type == "PDF":
         file_data = ""
         for page in pdf_reader.pages:
             file_data += page.extract_text()
+
         st.write("Uploaded PDF file:")
-        st.write(file_data)
+        with st.container():
+            st.markdown(
+                "<style>"
+                ".scrollable {"
+                "    max-height: 300px;"
+                "    overflow-y: auto;"
+                "}"
+                "</style>"
+                '<div class="scrollable">'
+                + file_data.replace("\n", "<br>")
+                + "</div>",
+                unsafe_allow_html=True,
+            )
+            st.markdown("")
 else:
     file_data = st.text_area("Enter text here")
 
