@@ -2,3 +2,5 @@ openai
 streamlit
 PyPDF2
 Pillow
+pandasai==0.2.2
+matplotlib
