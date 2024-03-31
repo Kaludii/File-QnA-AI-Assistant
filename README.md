@@ -1,51 +1,48 @@
+# File Q&A AI Assistant 🤖
 
-# File Q&A AI Assistant
+This is a Streamlit app that allows users to upload CSV, PDF files, or enter text and ask questions related to the content. The app uses OpenAI's API along with PandasAI for CSV files and LangChain for PDF and text files to provide quick answers in real-time.
 
-This is a Streamlit app that allows users to upload CSV or PDF files, or enter text and ask questions related to the content. The app uses OpenAI's ChatGPT model to assist users in answering their questions about the uploaded content, which is streamed back in real time similar to the ChatGPT interface.
+## Web App
+Click [Here](https://huggingface.co/spaces/Kaludi/File-QnA-AI-Assistant_App "Here") to view this app online!
 
-# Web App
-Click [Here](https://huggingface.co/spaces/Kaludi/File-QnA-AI-Assistant_App "Here") To View This App Online!
-
-![image](https://user-images.githubusercontent.com/63890666/224580639-2aeec181-e7ad-446a-af69-0d2bfea33dff.png)
+![image](https://github.com/Kaludii/File-QnA-AI-Assistant/assets/63890666/fb7b2962-1410-4d06-b563-0428f8369d1d)
+![image](https://github.com/Kaludii/File-QnA-AI-Assistant/assets/63890666/c304d98d-87aa-4c9e-8373-a6ea34589b40)
 
 
 ## Features
 
--   Users can upload CSV or PDF files, or enter text and ask questions related to the content.
--   The app uses OpenAI's ChatGPT model to generate responses to user questions.
--   Users can see the uploaded file as a table or text.
--   The app can handle large PDF files by processing one page at a time.
--   Users can easily run the app locally with minimal setup using Streamlit.
-
+- Users can upload CSV, PDF files, or enter text to ask questions related to the content.
+- PandasAI is used for CSV uploads, along with asking questions, users can also request visualizations to generate a graph directly from the CSV data.
+- For PDF and text inputs, LangChain is used to answer questions related to the content, no matter how long it is.
 
 ## Usage
 
-When you run the app, you will see a title and description explaining what the app does. You will also see input fields for the OpenAI API key, question, and file type. You can enter your OpenAI API key and question, and select the file type you want to upload.
-
 ### CSV File
 
-If you select "CSV" as the file type, you will be prompted to upload a CSV file. Once you upload the file, it will be displayed as a table, and the file data will be stored as a CSV string.
+- Upload a CSV file to interact with the data through questions or request visualizations directly.
 
-### PDF File
+### PDF File and Text
 
-If you select "PDF" as the file type, you will be prompted to upload a PDF file. Once you upload the file, it will be displayed as text, and the file data will be stored as a string.
-
-### Text
-
-If you select "Text" as the file type, you will be prompted to enter text. The text you enter will be stored as a string.
+- Upload a PDF file or enter text to get answers to your questions based on the content.
 
 ### Asking Questions
 
-Once you have uploaded a file or entered text, you can ask questions related to the content. Type your question in the "Question" field and click the "Send" button. The app will use OpenAI's ChatGPT model to generate a response to your question and display it below the "Send" button.
+- Enter your question in the "Question" field and click "Send" to receive answers based on the uploaded content or entered text.
 
 ## Requirements
 
--   Python 3.6 or higher
--   Streamlit
--   openai
--   pandas
--   PyPDF2
--   Pillow
+- Python 3.6 or higher
+- Streamlit
+- openai
+- pandasai==0.2.2
+- PyPDF2
+- Pillow
+- LangChain
+- docarray
+- matplotlib
+- pypdf
+- tiktoken
+- faiss-cpu
 
 ## Installation
 
@@ -54,16 +51,7 @@ Once you have uploaded a file or entered text, you can ask questions related to 
 `git clone https://github.com/Kaludii/File-QnA-AI-Assistant.git` 
 
 2.  Install the required packages:
-To run this app, you will need to install the following dependencies or type `pip install -r requirements.txt` to automatically download:
-
--   `streamlit`
--   `openai`
--   `pandas`
--   `PyPDF2`
--   `Pillow`
-
-You can install them using pip:
-`pip install openai pandas streamlit PyPDF2 Pillow` 
+To run this app, type `pip install -r requirements.txt` to automatically download all necessary dependencies, including Streamlit, OpenAI, Pandas, PyPDF2, Pillow, and LangChain.
 
 3.  Run the app:
 
