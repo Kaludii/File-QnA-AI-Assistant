@@ -4,3 +4,9 @@ PyPDF2
 Pillow
 pandasai==0.2.2
 matplotlib
+langchain
+pypdf
+langchain[docarray]
+docarray
+tiktoken
+faiss-cpu
